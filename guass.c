@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -6,8 +5,8 @@
 #include <sys/times.h>
 #include <sys/time.h>
 #include <limits.h>
-#include <ulocks.h>
-#include <task.h>
+#include <pthread.h>
+#include <string.h>
 
 /* Program Parameters */
 #define MAXN 2000  /* Max value of N */
@@ -182,6 +181,7 @@ void main(int argc, char **argv) {
 	/*printf("               (%g ms according to times())\n",
 	 *       (etstop2 - etstart2) / (float)CLOCKS_PER_SEC * 1000);
 	 */
+/*
 	printf("(CPU times are accurate to the nearest %g ms)\n",
 		1.0 / (float)CLOCKS_PER_SEC * 1000.0);
 	printf("My total CPU time for parent = %g ms.\n",
